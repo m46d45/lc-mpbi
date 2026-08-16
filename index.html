@@ -6,7 +6,7 @@
 <title>LC-MPBI — Lean Construction Market Penetration Benchmarking Initiative</title>
 <meta name="description" content="Every National Champion. One global standard. Real impact data. Germany 2025 is the first national benchmark."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://images.unsplash.com"/>
+<link rel="preconnect" href="https://images.pexels.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
 :root{--paper:#f3eee4;--paper2:#e7e0d2;--card:#faf7f1;--ink:#17202a;--muted:#5e6870;--line:#d4cbbb;--teal:#0c6b61;--teal2:#084940;--inv:#12181f;--invfg:#f3eee4;--ex:#c5c0b4;--jo:#7eb8ae;--st:#2a8f82;--pu:#0c6b61;--fd:"Newsreader",Palatino,serif;--fs:"Source Sans 3",system-ui,sans-serif;--max:72rem}
@@ -29,10 +29,10 @@ nav.desktop a:hover{opacity:1;background:var(--paper2)}
 .hero{position:relative;min-height:92svh;display:flex;align-items:flex-end;color:var(--invfg);padding:5rem 0 3.5rem;isolation:isolate;
   background-color:#12181f;
   background-image:
-    linear-gradient(105deg,rgba(12,18,28,.88) 0%,rgba(12,18,28,.62) 42%,rgba(12,18,28,.28) 100%),
-    url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=80");
+    linear-gradient(105deg,rgba(12,18,28,.82) 0%,rgba(12,18,28,.5) 50%,rgba(12,18,28,.28) 100%),
+    url("https://images.pexels.com/photos/7151782/pexels-photo-7151782.jpeg?auto=compress&cs=tinysrgb&w=1920");
   background-size:cover;
-  background-position:center 30%;
+  background-position:center 40%;
   background-repeat:no-repeat;
 }
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(12,18,28,.55) 0%,transparent 45%)}
@@ -56,13 +56,23 @@ nav.desktop a:hover{opacity:1;background:var(--paper2)}
 .pill{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
 .pill::before{content:"";width:.5rem;height:.5rem;border-radius:99px;background:currentColor}
 .pill[data-s=existed]{color:#8a8378}.pill[data-s=joined]{color:var(--jo)}.pill[data-s=studied]{color:var(--st)}.pill[data-s=published]{color:var(--pu)}
-.map{position:relative;border:1px solid var(--line);border-radius:1.25rem;background:linear-gradient(180deg,var(--card),var(--paper2));min-height:18rem;overflow:hidden}
-.map-c{position:relative;width:100%;aspect-ratio:2.1/1;min-height:16rem}
-.map-g{position:absolute;inset:8% 4% 12% 4%;background-image:radial-gradient(circle,color-mix(in srgb,var(--ink) 12%,transparent) 1px,transparent 1.2px);background-size:14px 14px;opacity:.55;border-radius:50%/40%;pointer-events:none}
-.dot{position:absolute;width:.85rem;height:.85rem;border-radius:99px;border:2px solid var(--card);transform:translate(-50%,-50%);cursor:pointer;padding:0}
+.map{position:relative;border:1px solid var(--line);border-radius:1.25rem;background:#dfe8e2;min-height:18rem;overflow:hidden}
+.map-c{position:relative;width:100%;aspect-ratio:2.1/1;min-height:18rem;
+  background-color:#dfe8e2;
+  background-image:
+    radial-gradient(ellipse 20% 32% at 20% 36%, #b7c4bb 0%, transparent 72%),
+    radial-gradient(ellipse 11% 20% at 28% 62%, #b7c4bb 0%, transparent 72%),
+    radial-gradient(ellipse 16% 34% at 52% 30%, #b7c4bb 0%, transparent 72%),
+    radial-gradient(ellipse 9% 16% at 56% 50%, #b7c4bb 0%, transparent 72%),
+    radial-gradient(ellipse 18% 22% at 80% 42%, #b7c4bb 0%, transparent 72%),
+    radial-gradient(ellipse 9% 14% at 90% 70%, #b7c4bb 0%, transparent 72%),
+    radial-gradient(ellipse 7% 12% at 16% 26%, #b7c4bb 0%, transparent 72%);
+  background-repeat:no-repeat}
+.map-g{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 45%,rgba(223,232,226,.5) 100%)}
+.dot{position:absolute;width:1rem;height:1rem;border-radius:99px;border:2px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.3);transform:translate(-50%,-50%);cursor:pointer;padding:0;z-index:2}
 .dot:hover,.dot.on{transform:translate(-50%,-50%) scale(1.35);box-shadow:0 0 0 4px color-mix(in srgb,var(--teal) 25%,transparent)}
 .dot[data-s=existed]{background:var(--ex)}.dot[data-s=joined]{background:var(--jo)}.dot[data-s=studied]{background:var(--st)}.dot[data-s=published]{background:var(--pu)}
-.legend{display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;padding:.85rem 1.1rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;padding:.85rem 1.1rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted);background:var(--card)}
 .legend i{display:inline-block;width:.65rem;height:.65rem;border-radius:99px;margin-right:.35rem}
 .legend .ex{background:var(--ex)}.legend .jo{background:var(--jo)}.legend .st{background:var(--st)}.legend .pu{background:var(--pu)}
 .figs{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1rem}@media(min-width:640px){.figs{grid-template-columns:repeat(4,1fr)}}
