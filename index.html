@@ -289,20 +289,31 @@ function map(rootId,panelId){
     p.innerHTML='<article class="card"><p class="pill" data-s="'+c.status+'">'+labels[c.status]+'</p><h3 style="margin-top:.5rem">'+c.name+'</h3><p>'+c.org+'</p>'+(figs?'<div class="figs">'+figs+'</div>':'')+link+'</article>';
   }
   fetch('world.svg').then(r=>r.text()).then(svgText=>{
+    svgText=svgText.replace(/<title>.*?<\/title>/i,'').replace(/<desc>.*?<\/desc>/i,'');
     canvas.innerHTML=svgText;
     const svg=canvas.querySelector('svg');
     if(svg){
       svg.removeAttribute('width');svg.removeAttribute('height');
-      svg.querySelectorAll('path').forEach(p=>{if(!p.hasAttribute('data-s')){p.style.fill='#ffffff';p.style.fillOpacity='0.95';}});
       svg.setAttribute('preserveAspectRatio','xMidYMid meet');
+      svg.querySelectorAll('path').forEach(p=>{
+        p.style.fill='#ffffff';
+        p.style.fillOpacity='0.95';
+        p.style.stroke='#c5c0b4';
+        p.style.strokeWidth='0.5';
+      });
       C.forEach(c=>{
         const paths=svg.querySelectorAll('path#'+c.id+', path[id="'+c.id+'"]');
         paths.forEach(p=>{
           p.setAttribute('data-s',c.status);
           const colors={existed:'#9a9488',joined:'#7eb8ae',studied:'#2a8f82',published:'#0c6b61'};
           p.style.fill=colors[c.status]||'#9a9488';
-          p.style.fillOpacity='0.9';
+          p.style.fillOpacity='0.92';
           p.style.cursor='pointer';
+          const oldTitle=p.querySelector('title');
+          if(oldTitle) oldTitle.remove();
+          const t=document.createElementNS('http://www.w3.org/2000/svg','title');
+          t.textContent=c.name+' · '+labels[c.status];
+          p.insertBefore(t,p.firstChild);
           p.onclick=()=>{
             svg.querySelectorAll('path.on').forEach(x=>x.classList.remove('on'));
             p.classList.add('on');
