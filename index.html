@@ -68,8 +68,22 @@ nav.desktop a:hover{opacity:1;background:var(--paper2)}
 .crow{display:block;padding:1rem 1.15rem;border:1px solid var(--line);border-radius:.9rem;background:var(--card);margin-bottom:.65rem}
 .crow .top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem;align-items:baseline}
 .crow h3{margin:0;font-size:1.05rem;font-family:var(--fs);font-weight:600}
-.mat{display:grid;grid-template-columns:2.5rem 1fr auto;gap:.5rem 1rem;align-items:center;padding:.85rem 1rem;border:1px solid var(--line);border-radius:.85rem;background:var(--card);margin-bottom:.65rem}
-.bar-fill{grid-column:1/-1;height:.35rem;background:var(--paper2);border-radius:99px;overflow:hidden}.bar-fill>i{display:block;height:100%;background:var(--teal)}
+.mat{display:grid;grid-template-columns:2.75rem 1fr auto;gap:.55rem 1rem;align-items:center;padding:1rem 1.15rem;border:1px solid var(--line);border-radius:1rem;background:var(--card);margin-bottom:.75rem}
+.mat .num{display:grid;place-items:center;width:2.35rem;height:2.35rem;border-radius:99px;font-family:var(--fd);font-size:1.05rem;font-weight:500;color:#fff}
+.mat[data-lv="1"] .num{background:#7eb8ae}
+.mat[data-lv="2"] .num{background:#4a9e93}
+.mat[data-lv="3"] .num{background:#2a8f82}
+.mat[data-lv="4"] .num{background:#0c6b61}
+.mat[data-lv="5"] .num{background:#084940}
+.mat strong{font-size:1.02rem}
+.mat .pct{font-family:var(--fd);font-size:1.15rem;font-weight:500;color:var(--ink);min-width:3rem;text-align:right}
+.bar-fill{grid-column:1/-1;height:.45rem;background:var(--paper2);border-radius:99px;overflow:hidden;margin-top:.15rem}
+.bar-fill>i{display:block;height:100%;border-radius:99px}
+.mat[data-lv="1"] .bar-fill>i{background:#7eb8ae}
+.mat[data-lv="2"] .bar-fill>i{background:#4a9e93}
+.mat[data-lv="3"] .bar-fill>i{background:#2a8f82}
+.mat[data-lv="4"] .bar-fill>i{background:#0c6b61}
+.mat[data-lv="5"] .bar-fill>i{background:#084940}
 footer{background:var(--inv);color:var(--invfg);padding:3rem 0;margin-top:2rem}
 .fg{display:grid;gap:2rem}@media(min-width:768px){.fg{grid-template-columns:2fr 1fr 1fr}}
 footer a{color:color-mix(in srgb,var(--invfg) 80%,transparent);font-size:.92rem;display:block;margin:.35rem 0}
@@ -184,12 +198,12 @@ section[id]{scroll-margin-top:5rem}
       <article class="card"><p class="step">02</p><h3>Practitioner interviews</h3><p>Semi-structured interviews on application and maturity.</p><p style="font-family:var(--fd);font-size:2rem;margin-top:1rem;color:var(--ink)">15</p><p>interviews</p></article>
       <article class="card"><p class="step">03</p><h3>Nationwide survey</h3><p>Every identified company invited.</p><p style="font-family:var(--fd);font-size:2rem;margin-top:1rem;color:var(--ink)">97</p><p>companies · 22% response</p></article>
     </div>
-    <h3 style="margin:2rem 0 .75rem">Five maturity stages</h3>
-    <div class="mat"><strong style="color:var(--teal);font-family:var(--fd)">1</strong><div><strong>Informed</strong></div><span>9%</span><div class="bar-fill"><i style="width:9%"></i></div></div>
-    <div class="mat"><strong style="color:var(--teal);font-family:var(--fd)">2</strong><div><strong>Piloting</strong></div><span>23%</span><div class="bar-fill"><i style="width:23%"></i></div></div>
-    <div class="mat"><strong style="color:var(--teal);font-family:var(--fd)">3</strong><div><strong>Selective standard</strong></div><span>37%</span><div class="bar-fill"><i style="width:37%"></i></div></div>
-    <div class="mat"><strong style="color:var(--teal);font-family:var(--fd)">4</strong><div><strong>Majority of projects</strong></div><span>19%</span><div class="bar-fill"><i style="width:19%"></i></div></div>
-    <div class="mat"><strong style="color:var(--teal);font-family:var(--fd)">5</strong><div><strong>Culture & strategy</strong></div><span>12%</span><div class="bar-fill"><i style="width:12%"></i></div></div>
+    <h3 style="margin:2rem 0 1rem">Five maturity stages</h3>
+    <div class="mat" data-lv="1"><span class="num">1</span><div><strong>Informed</strong></div><span class="pct">9%</span><div class="bar-fill"><i style="width:9%"></i></div></div>
+    <div class="mat" data-lv="2"><span class="num">2</span><div><strong>Piloting</strong></div><span class="pct">23%</span><div class="bar-fill"><i style="width:23%"></i></div></div>
+    <div class="mat" data-lv="3"><span class="num">3</span><div><strong>Selective standard</strong></div><span class="pct">37%</span><div class="bar-fill"><i style="width:37%"></i></div></div>
+    <div class="mat" data-lv="4"><span class="num">4</span><div><strong>Majority of projects</strong></div><span class="pct">19%</span><div class="bar-fill"><i style="width:19%"></i></div></div>
+    <div class="mat" data-lv="5"><span class="num">5</span><div><strong>Culture & strategy</strong></div><span class="pct">12%</span><div class="bar-fill"><i style="width:12%"></i></div></div>
     <p class="muted" style="font-size:.85rem">Shares: Germany 2025 survey (reference only).</p>
     <h3 style="margin:2rem 0 1rem">Forms & publications</h3>
     <div class="grid2">
