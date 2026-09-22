@@ -5,7 +5,20 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>LC-MPBI — Lean Construction Market Penetration Benchmarking Initiative</title>
 <meta name="description" content="Every country. One shared method. Comparable data. Germany 2025 is the first national benchmark."/>
+<meta name="theme-color" content="#0c6b61"/>
+<link rel="canonical" href="https://lc-mpbi.vercel.app/"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://lc-mpbi.vercel.app/"/>
+<meta property="og:title" content="LC-MPBI — Lean Construction Market Penetration Benchmarking Initiative"/>
+<meta property="og:description" content="Every country. One shared method. Comparable data. Germany 2025 is the first national benchmark."/>
+<meta property="og:image" content="https://lc-mpbi.vercel.app/hero.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="LC-MPBI — Lean Construction Market Penetration Benchmarking Initiative"/>
+<meta name="twitter:description" content="Every country. One shared method. Comparable data. Germany 2025 is the first national benchmark."/>
+<meta name="twitter:image" content="https://lc-mpbi.vercel.app/hero.jpg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
 :root{--paper:#f3eee4;--paper2:#e7e0d2;--card:#faf7f1;--ink:#17202a;--muted:#5e6870;--line:#d4cbbb;--teal:#0c6b61;--teal2:#084940;--inv:#12181f;--invfg:#f3eee4;--ex:#c5c0b4;--jo:#7eb8ae;--st:#2a8f82;--pu:#0c6b61;--fd:"Newsreader",Palatino,serif;--fs:"Source Sans 3",system-ui,sans-serif;--max:72rem}
@@ -111,6 +124,10 @@ section[id]{scroll-margin-top:5rem}
 .tk-item p{margin:0;font-size:.88rem;color:var(--muted)}
 .tk-item .actions{margin-top:.35rem}
 .btn-dis{opacity:.45;pointer-events:none;cursor:not-allowed}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .map-c svg,.map-c path{transition:none}
+}
 </style>
 </head>
 <body>
@@ -126,13 +143,13 @@ section[id]{scroll-margin-top:5rem}
     </nav>
     <button class="menu" type="button" id="menu" aria-label="Menu" aria-expanded="false">☰</button>
   </div>
-  <div class="mob" id="mob">
+  <nav class="mob" id="mob" aria-label="Mobile">
     <a href="#about">About</a>
     <a href="#participate">How to Participate</a>
     <a href="#resources">Resources</a>
     <a href="#benchmark">Benchmark</a>
     <a href="#contact">Contact</a>
-  </div>
+  </nav>
 </header>
 <main>
 <section class="hero" id="home">
@@ -224,7 +241,7 @@ section[id]{scroll-margin-top:5rem}
         <p><strong>Interview Guide</strong> — themes and example questions for practitioner interviews.</p>
         <p><strong>Industry Scan Checklist</strong> — sources and steps to identify Lean companies in your country.</p>
         <p><strong>Results Template</strong> — format for submitting headline figures to the LC-MPBI dashboard.</p>
-        <p><strong>One-pager</strong> — maturity stages and the 4L4D frame for quick reference.</p>
+        <p><strong>One-pager</strong> — maturity stages and the 4L4D frame for quick reference (download below).</p>
         <p><strong>Directory update</strong> — for an organisation already on the list, or a new organisation that represents one country or several. The coordinator reviews it; emails stay off the public site.</p>
       </div>
     </details>
@@ -296,6 +313,11 @@ section[id]{scroll-margin-top:5rem}
           <a class="btn btn-p" style="height:2.25rem;font-size:.85rem" href="LC-MPBI-Results-Template.xlsx" target="_blank" rel="noreferrer">Excel</a>
           <a class="btn btn-o" style="height:2.25rem;font-size:.85rem" href="LC-MPBI-Results-Template.pdf" target="_blank" rel="noreferrer">PDF</a>
         </div>
+      </div>
+      <div class="tk-item">
+        <h4>One-pager</h4>
+        <p>Maturity stages and the 4L4D frame for quick reference (v0.9 working draft).</p>
+        <div class="actions"><a class="btn btn-p" style="height:2.25rem;font-size:.85rem" href="LC-MPBI-One-Pager.pdf" target="_blank" rel="noreferrer">Download PDF</a></div>
       </div>
       <div class="tk-item">
         <h4>Directory update</h4>
@@ -407,9 +429,19 @@ section[id]{scroll-margin-top:5rem}
 <script>
 const C=[{id:"ar",name:"Argentina",org:"LCI Argentina",contact:"Federico Thesing",status:"existed"},{id:"au",name:"Australia",org:"LC ANZ",contact:"Michael Ward",status:"existed"},{id:"nz",name:"New Zealand",org:"LC ANZ",contact:"Michael Ward",status:"existed"},{id:"bo",name:"Bolivia",org:"LCI Bolivia",contact:"Jose Luis Orias",status:"existed"},{id:"br",name:"Brazil",org:"—",contact:"Dayana Costa; Carlos Formoso; José de Paula Barros Neto",status:"existed"},{id:"ca",name:"Canada",org:"LCI Canada",contact:"Dominic Desmarais",status:"existed"},{id:"cl",name:"Chile",org:"—",contact:"Ivan Rubio",status:"existed"},{id:"co",name:"Colombia",org:"—",contact:"Alejandro Choconta",status:"existed"},{id:"cr",name:"Costa Rica",org:"LCI Costa Rica",contact:"Mario Carmona; Jorge Castro",status:"existed"},{id:"dk",name:"Denmark",org:"Lean Construction-Denmark",contact:"Rolf Simenson; Morten Skaarup Jensen",status:"existed"},{id:"ec",name:"Ecuador",org:"—",contact:"Marco Tapia",status:"existed"},{id:"ee",name:"Estonia",org:"—",contact:"Ergo Pikas",status:"existed"},{id:"fi",name:"Finland",org:"—",contact:"Jan Hellman; Hannu Ratamäki",status:"existed"},{id:"fr",name:"France",org:"—",contact:"Zoubeir Lafhaj",status:"existed"},{id:"de",name:"Germany",org:"German Lean Construction Institute (GLCI)",contact:"Shervin Haghsheno; Thomas Bär",status:"published",figures:[{v:"451",l:"Lean companies mapped"},{v:"97",l:"Survey responses"},{v:"31%",l:"Stages 4–5"},{v:"29%",l:"Lean in > half of projects"}],page:"#germany"},{id:"at",name:"Austria",org:"GLCI",contact:"Shervin Haghsheno; Thomas Bär",status:"existed"},{id:"lu",name:"Luxembourg",org:"GLCI",contact:"Shervin Haghsheno; Thomas Bär",status:"existed"},{id:"in",name:"India",org:"ILCE",contact:"Anup Mathew",status:"existed"},{id:"id",name:"Indonesia",org:"IAMKRI",contact:"Muhamad Abduh",status:"existed"},{id:"ie",name:"Ireland",org:"—",contact:"Richard Fitzpatrick; Trevor McSharry",status:"existed"},{id:"mx",name:"Mexico",org:"LCI Mexico",contact:"Melissa Quintana",status:"existed"},{id:"no",name:"Norway",org:"—",contact:"Oyvind Kjollesdal",status:"existed"},{id:"pe",name:"Peru",org:"LCI Peru",contact:"Santiago Ruiz; José Guzman",status:"existed"},{id:"qa",name:"Qatar",org:"LCI Qatar",contact:"Luai El Sbaek",status:"existed"},{id:"es",name:"Spain",org:"—",contact:"Juan Felipe Pons",status:"existed"},{id:"se",name:"Sweden",org:"Lean Forum Bygg",contact:"Jani Tjell",status:"existed"},{id:"ch",name:"Switzerland",org:"SLCI",contact:"Severin Boser",status:"existed"},{id:"gb",name:"United Kingdom",org:"LCI UK",status:"existed"},{id:"us",name:"United States",org:"LCI",contact:"Shannon Heyer",status:"existed"},{id:"uy",name:"Uruguay",org:"—",contact:"Guillermo Loblowitz",status:"existed"}];
 const labels={existed:"Existed",joined:"Joined",studied:"Studied",published:"Published"};
+let worldSvgPromise=null;
+function loadWorldSvg(){
+  if(!worldSvgPromise){
+    worldSvgPromise=fetch('world.svg').then(r=>{
+      if(!r.ok) throw new Error('map fetch failed');
+      return r.text();
+    });
+  }
+  return worldSvgPromise;
+}
 function map(rootId,panelId){
   const root=document.getElementById(rootId);if(!root)return;
-  root.innerHTML='<div class="map-c" id="'+rootId+'-c"><div class="map-zoom"><button type="button" data-z="in" title="Zoom in">+</button><button type="button" data-z="out" title="Zoom out">−</button><button type="button" data-z="reset" title="Reset">⟲</button></div><div class="map-svg" id="'+rootId+'-svg"></div></div><div class="legend"><span><i class="ex"></i>Existed</span><span><i class="jo"></i>Joined</span><span><i class="st"></i>Studied</span><span><i class="pu"></i>Published</span></div>';
+  root.innerHTML='<div class="map-c" id="'+rootId+'-c"><div class="map-zoom"><button type="button" data-z="in" title="Zoom in" aria-label="Zoom in">+</button><button type="button" data-z="out" title="Zoom out" aria-label="Zoom out">−</button><button type="button" data-z="reset" title="Reset" aria-label="Reset zoom">⟲</button></div><div class="map-svg" id="'+rootId+'-svg"></div></div><div class="legend"><span><i class="ex"></i>Existed</span><span><i class="jo"></i>Joined</span><span><i class="st"></i>Studied</span><span><i class="pu"></i>Published</span></div>';
   const canvas=document.getElementById(rootId+'-c');
   const svgBox=document.getElementById(rootId+'-svg');
   let zoom=1;
@@ -421,13 +453,15 @@ function map(rootId,panelId){
     const who=c.contact?'<p class="muted" style="margin-top:.35rem">'+c.contact+'</p>':'';
     p.innerHTML='<article class="card"><p class="pill" data-s="'+c.status+'">'+labels[c.status]+'</p><h3 style="margin-top:.5rem">'+c.name+'</h3><p>'+c.org+'</p>'+who+(figs?'<div class="figs">'+figs+'</div>':'')+link+'</article>';
   }
-  fetch('world.svg').then(r=>r.text()).then(svgText=>{
+  loadWorldSvg().then(svgText=>{
     svgText=svgText.replace(/<title>.*?<\/title>/i,'').replace(/<desc>.*?<\/desc>/i,'');
     svgBox.innerHTML=svgText;
     const svg=svgBox.querySelector('svg');
     if(svg){
       svg.removeAttribute('width');svg.removeAttribute('height');
       svg.setAttribute('preserveAspectRatio','xMidYMid meet');
+      svg.setAttribute('role','img');
+      svg.setAttribute('aria-label','World map of LC-MPBI country status');
       svg.querySelectorAll('path').forEach(p=>{
         p.style.fill='#ffffff';
         p.style.fillOpacity='0.95';
@@ -475,16 +509,16 @@ function map(rootId,panelId){
           applyZoom();
         };
       });
-      canvas.onwheel=e=>{
+      canvas.addEventListener('wheel',e=>{
         e.preventDefault();
         if(e.deltaY<0) zoom=Math.min(4, zoom*1.12);
         else zoom=Math.max(1, zoom/1.12);
         applyZoom();
-      };
+      },{passive:false});
     }
     panel(sel);
   }).catch(()=>{
-    svgBox.innerHTML='<p style="padding:2rem;text-align:center;color:var(--muted)">Map loading…</p>';
+    svgBox.innerHTML='<p style="padding:2rem;text-align:center;color:var(--muted)">Map unavailable.</p>';
     panel(sel);
   });
 }

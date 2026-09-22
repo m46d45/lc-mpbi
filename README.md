@@ -7,12 +7,13 @@ Germany 2025 is the first published national benchmark and the reference model o
 
 ## Live
 
-Deployed via Vercel from this repository.
+Deployed via Vercel from this repository: https://lc-mpbi.vercel.app
 
 ## Structure
 
 - `index.html` — single-page site (About, How to Participate, Resources, Benchmark, Contact)
 - Status ladder: Existed → Joined → Studied → Published
+- Toolkit PDFs/XLSX in the repo root (Method Guide, Survey, Interview/Scan, Results, Directory Update, One-Pager)
 
 ## Local
 
@@ -25,5 +26,5 @@ python3 -m http.server 8080
 ## Credits
 
 Coordinator: Muhamad Abduh (ITB)  
-Steering: Glenn Ballard, Cezar Valdes, Ivan Rubio, Shervin Haghsheno  
+Advisory: Glenn Ballard, Shervin Haghsheno, Paul Christian John  
 Source studies: KIT & GLCI 2025
